@@ -68,3 +68,9 @@ li {
   text-decoration: none;
   color: #8453a2;
 }
+
+#icon {
+  position: relative;
+  top: -6px;
+  max-width: 80px;
+}
