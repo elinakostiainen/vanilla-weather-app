@@ -1,0 +1,41 @@
+body {
+  font-family: "Rubik", sans-serif;
+  color: #222831;
+}
+
+h1 {
+  font-size: 44px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.weather-app {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 25px;
+  border: 1px solid #9aa0a6;
+  border-radius: 8px;
+}
+
+.temperature {
+  font-size: 38px;
+  font-weight: 400;
+}
+
+.units {
+  font-size: small;
+  position: relative;
+  top: -18px;
+}
