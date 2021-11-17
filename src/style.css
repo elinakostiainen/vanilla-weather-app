@@ -39,3 +39,7 @@ li {
   position: relative;
   top: -18px;
 }
+
+#description {
+  text-transform: capitalize;
+}
