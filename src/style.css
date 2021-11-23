@@ -34,7 +34,13 @@ li {
   font-weight: 400;
 }
 
-.units {
+.weather-temperature .active {
+  cursor: default;
+  color: #8453a2;
+  text-decoration: none;
+}
+
+.weather-temperature .units {
   font-size: medium;
   position: relative;
   top: -18px;
@@ -59,18 +65,16 @@ li {
   text-transform: capitalize;
 }
 
-#celsius {
-  text-decoration: none;
-  color: #8453a2;
-}
-
-#farenheit {
-  text-decoration: none;
-  color: #8453a2;
-}
-
 #icon {
   position: relative;
   top: -6px;
   max-width: 80px;
+}
+
+#celsius {
+  color: #8453a2;
+}
+
+#farenheit {
+  color: #8453a2;
 }
