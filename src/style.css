@@ -61,6 +61,29 @@ li {
   color: #46066d;
 }
 
+.weather-forecast {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.forecast-date {
+  font-size: 18px;
+}
+
+.forecast-description {
+  font-size: 12px;
+}
+
+.forecast-temperatures {
+  position: relative;
+  bottom: -14px;
+  font-size: 18px;
+}
+
+.min-temperature {
+  opacity: 0.5;
+}
+
 #description {
   text-transform: capitalize;
 }
