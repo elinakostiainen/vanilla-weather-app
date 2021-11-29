@@ -40,7 +40,7 @@ li {
   text-decoration: none;
 }
 
-.weather-temperature .units {
+.weather-temperature .unit {
   font-size: medium;
   position: relative;
   top: -18px;
@@ -92,12 +92,4 @@ li {
   position: relative;
   top: -6px;
   max-width: 80px;
-}
-
-#celsius {
-  color: #8453a2;
-}
-
-#farenheit {
-  color: #8453a2;
 }

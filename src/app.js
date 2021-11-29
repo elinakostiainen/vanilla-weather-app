@@ -19,22 +19,7 @@ function formatDate() {
 
   let hour = date.getHours();
   if (hour > 11 && hour < 24) {
-    let hours = [
-      "12",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "10",
-      "11",
-      "12",
-    ];
-    hour = hours[date.getHours()];
+    hour = date.getHours();
     return `${day} ${hour}:${minutes} pm`;
   } else {
     return `${day} ${hour}:${minutes} am`;
@@ -102,7 +87,7 @@ function displayWeather(response) {
   let dateElement = document.querySelector("#date");
 
   celsiusTemperature = response.data.main.temp;
-  console.log(response.data);
+
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -147,34 +132,8 @@ function submit(event) {
   let city = document.querySelector("#city-input");
   searchCity(city.value);
 }
-
-function changeToFarenheit(event) {
-  event.preventDefault();
-  farenheitLink.classList.add("active");
-  celsiusLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  let farenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(farenheitTemperature);
-}
-
-function changeToCelsius(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  farenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", submit);
-
-let farenheitLink = document.querySelector("#farenheit");
-farenheitLink.addEventListener("click", changeToFarenheit);
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", changeToCelsius);
 
 searchCity("Brisbane");
 displayForecast();
