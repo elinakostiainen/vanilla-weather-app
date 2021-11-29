@@ -22,6 +22,7 @@ li {
 }
 
 .weather-app {
+  background: #fafafa;
   margin-top: 5%;
   margin-bottom: 5%;
   padding: 25px;
@@ -32,12 +33,6 @@ li {
 .temperature {
   font-size: 42px;
   font-weight: 400;
-}
-
-.weather-temperature .active {
-  cursor: default;
-  color: #8453a2;
-  text-decoration: none;
 }
 
 .weather-temperature .unit {
@@ -81,7 +76,17 @@ li {
 }
 
 .min-temperature {
-  opacity: 0.5;
+  color: #a393eb;
+}
+
+.search-city {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
+  background: rgba(163, 147, 235, 0.6);
+  border: 1px solid rgba(163, 147, 235, 0.5);
 }
 
 #description {
