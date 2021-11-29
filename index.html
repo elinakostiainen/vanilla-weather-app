@@ -32,14 +32,14 @@
                 <li><span id="date"></span></li>
                 <li id="description"></li>
                 <div class="weather-temperature">
-                <img src="" alt="" id="icon" />
-                <span class="temperature"
-                  ><strong id="temperature"></strong></span
-                ><span class="units"
-                  ><a href="" id="celsius">°C</a>|<a href="" id="farenheit"
-                    >°F</a
-                  ></span
-                >
+                  <img src="" alt="" id="icon" />
+                  <span class="temperature"
+                    ><strong id="temperature"></strong></span
+                  ><span class="units"
+                    ><a href="" id="celsius">°C</a>|<a href="" id="farenheit"
+                      >°F</a
+                    ></span
+                  >
                 </div>
               </ul>
             </div>
@@ -53,27 +53,23 @@
               <div class="row">
                 <div class="col-2">
                   <div class="forecast-temperatures">
-                    <span class="max-temperature">
-                      21°
-                    </span>
-                    <span class="min-temperature">
-                      18°
-                    </span>
+                    <span class="max-temperature"> 21° </span>
+                    <span class="min-temperature"> 18° </span>
                   </div>
-                  <img src="http://openweathermap.org/img/wn/09d@2x.png" alt="" width="68">
-                    <div class="forecast-description">
-                  Cloudy
-                  </div>
-                  <div class="forecast-date">
-                  
-                  </div>
+                  <img
+                    src="http://openweathermap.org/img/wn/09d@2x.png"
+                    alt=""
+                    width="68"
+                  />
+                  <div class="forecast-description">Cloudy</div>
+                  <div class="forecast-date"></div>
                 </div>
               </div>
             </div>
           </div>
           <br />
             <div class="row">
-            <div class="col-7">
+              <div class="col-7">
             <form id="search-form">
               <input
                 id="city-input"
@@ -84,11 +80,16 @@
                 class="form-control"
               />
               </div>
+              <div class="col-2">
+              <button id="search-button" type="submit" class="btn btn-primary">
+                Go!
+              </button>
+              </div>
               <div class="col-1">
-              <button id="search-button" type="submit" class="btn btn-primary">Go!</button>
+              <button id="temp-of-location" class="btn btn-dark">🌍</button>
+              </div>
               </div>
             </form>
-            </div>
         </div>
         <small>
           <a
