@@ -98,8 +98,29 @@ function displayWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", `${response.data.weather[0].description}`);
-  dateElement.innerHTML = formatDate();
 
+  if (/clear/.test(descriptionElement.innerHTML)) {
+    document.querySelector("body").style.backgroundImage = "url('img/sun.jpg')";
+    document.querySelector(".weather-app").style.background =
+      "rgba(248,181,149,0.6)";
+  } else if (/cloud/.test(descriptionElement.innerHTML)) {
+    document.querySelector("body").style.backgroundImage =
+      "url('img/cloud.jpg')";
+    document.querySelector(".weather-app").style.background =
+      "rgba(227,246,245,0.5)";
+  } else if (/rain/.test(descriptionElement.innerHTML)) {
+    document.querySelector("body").style.backgroundImage =
+      "url('img/rain.jpg')";
+    document.querySelector(".weather-app").style.background =
+      "rgba(237,237,237,0.8)";
+  } else if (/snow/.test(descriptionElement.innerHTML)) {
+    document.querySelector("body").style.backgroundImage =
+      "url('img/snow.jpg')";
+    document.querySelector(".weather-app").style.background =
+      "rgba(222,252,249,0.2)";
+  }
+
+  dateElement.innerHTML = formatDate();
   getForecastWeather(response.data.coord);
 }
 
