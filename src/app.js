@@ -18,8 +18,22 @@ function formatDate() {
   let day = days[date.getDay()];
 
   let hour = date.getHours();
-  if (hour > 12) {
-    let hours = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+  if (hour > 11 && hour < 24) {
+    let hours = [
+      "12",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+    ];
     hour = hours[date.getHours()];
     return `${day} ${hour}:${minutes} pm`;
   } else {
@@ -88,7 +102,7 @@ function displayWeather(response) {
   let dateElement = document.querySelector("#date");
 
   celsiusTemperature = response.data.main.temp;
-
+  console.log(response.data);
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
