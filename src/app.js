@@ -108,16 +108,19 @@ function displayWeather(response) {
       "url('img/cloud.jpg')";
     document.querySelector(".weather-app").style.background =
       "rgba(227,246,245,0.5)";
-  } else if (/rain/.test(descriptionElement.innerHTML)) {
+  } else if (
+    /rain/.test(descriptionElement.innerHTML) ||
+    /drizzle/.test(descriptionElement.innerHTML)
+  ) {
     document.querySelector("body").style.backgroundImage =
       "url('img/rain.jpg')";
     document.querySelector(".weather-app").style.background =
-      "rgba(237,237,237,0.8)";
+      "rgba(237,237,237,0.6)";
   } else if (/snow/.test(descriptionElement.innerHTML)) {
     document.querySelector("body").style.backgroundImage =
       "url('img/snow.jpg')";
     document.querySelector(".weather-app").style.background =
-      "rgba(222,252,249,0.2)";
+      "rgba(255,250,250,0.6)";
   }
 
   dateElement.innerHTML = formatDate();

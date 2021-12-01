@@ -49,12 +49,12 @@ li {
 
 .open-source-code {
   text-decoration: none;
-  color: #8453a2;
+  color: #46066d;
   transform: all 200ms ease-in-out;
 }
 
 .open-source-code:hover {
-  color: #46066d;
+  color: #1c022b;
 }
 
 .weather-forecast {
