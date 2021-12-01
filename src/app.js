@@ -121,6 +121,15 @@ function displayWeather(response) {
       "url('img/snow.jpg')";
     document.querySelector(".weather-app").style.background =
       "rgba(255,250,250,0.6)";
+  } else if (/storm/.test(descriptionElement.innerHTML)) {
+    document.querySelector("body").style.backgroundImage =
+      "url('img/storm.jpg')";
+    document.querySelector(".weather-app").style.background =
+      "rgba(162,168,211,0.5)";
+  } else {
+    document.querySelector("body").style.backgroundImage = "url('img/sky.jpg')";
+    document.querySelector(".weather-app").style.background =
+      "rgba(255,203,203,0.4)";
   }
 
   dateElement.innerHTML = formatDate();
